@@ -1,0 +1,78 @@
+.container-skills{
+    min-height: 100vh;
+    width: 100%;
+
+
+}
+
+.main-text-skills{
+    padding: 1rem 0 0.5rem 0;
+    margin: 0 2rem 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--text-primary)
+
+
+
+}
+.main-skills{
+    display: flex;
+    margin: 0 2rem 2rem 2rem;
+    padding-bottom: 4rem;
+    height: 600px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+
+}
+main-skills li{
+    display: inline;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 2rem 0;
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family: 'Overpass', sans-serif;
+
+}
+ .skills{
+
+     order: 1;
+     background: var(--bg-primary);
+     flex-basis: 100%;
+     border: 2px solid var(--text-primary);
+     border-radius: 15px;
+
+}
+ .tools{
+    order: 2;
+    background: var(--bg-primary);
+    flex-basis: 100%;
+     border: 2px solid var(--text-primary);
+     border-radius: 15px;
+
+}
+ .img-skill{
+   width: 15px;
+     height: 15px;
+     margin: 0;
+ }
+@media screen and (min-width:600px) {
+    .main {
+        flex-wrap: nowrap;
+    }
+    .skills {
+        flex-basis: 200px;
+        order: 1;
+    }
+    .tools {
+        flex-basis: 200px;
+        order: 2;
+    }
+
+}

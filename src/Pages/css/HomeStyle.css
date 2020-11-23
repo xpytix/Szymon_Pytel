@@ -89,6 +89,7 @@
 .contact{
     display: flex;
     justify-content: center;
+    margin-bottom: 5%;
 
 }
 .contact a{
@@ -156,5 +157,20 @@ img{
         opacity: 0;
     }
 }
+
+
+@media only screen and (max-width: 600px) {
+
+}
+/*large*/
+@media only screen and (min-width: 600px) {
+    .contact-btn{
+
+        width: 40vw;
+
+    }
+}
+
+
 
 
