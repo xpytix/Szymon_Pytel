@@ -45,10 +45,11 @@ ul.ks-cboxtags li :hover  {
     transition: all .2s;
 }
 .container .main{
+    display: flex;
     padding-bottom: 100px;
     flex-direction: row;
     align-content: space-between;
     flex-wrap: wrap;
-    display: flex;
+
     justify-content: center;
 }
