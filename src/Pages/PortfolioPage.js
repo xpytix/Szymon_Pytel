@@ -7,11 +7,14 @@ import KickItImage from "./imagesCardFilter/kick-it.png";
 import UserGeneratorImage from "./imagesCardFilter/user-generator.png";
 import TimeUpImage from "./imagesCardFilter/timeUp.png";
 import PortfolioImage from "./imagesCardFilter/portfolio.png";
+import {useSelector} from "react-redux";
 
 
 const PortfolioPage = () => {
-
-
+    const state = useSelector( (state) => state.activities );
+    let styleBtn ={
+        backgroundColor: state.button,
+    }
     const portfolio = [
         {
             name: "Portfolio",
@@ -68,20 +71,20 @@ const PortfolioPage = () => {
     }, [filter]);
 
 
-
     return (
         <div>
             <div className="container">
                 <div className="menu">
                     <ul className="ks-cboxtags">
                         <li>
-                            <a active={filter === "All"}
+                            <a style={styleBtn} active={filter === "All"}
                                 onClick={() => setFilter("All")}>
                                 All
                             </a>
                         </li>
                         <li>
                             <a
+                                style={styleBtn}
                                 active={filter === "Front-end"}
                                 onClick={() => setFilter("Front-end")}>
                                 Frontend
@@ -89,6 +92,7 @@ const PortfolioPage = () => {
                         </li>
                         <li>
                             <a
+                                style={styleBtn}
                                 active={filter === "Back-end"}
                                 onClick={() => setFilter("Back-end")}>
                                 Back-end
@@ -97,6 +101,7 @@ const PortfolioPage = () => {
 
                         <li>
                             <a
+                                style={styleBtn}
                                 active={filter === "ReactJs"}
                                 onClick={() => setFilter("ReactJs")}>
                                 ReactJs
@@ -104,6 +109,7 @@ const PortfolioPage = () => {
                         </li>
                         <li>
                             <a
+                                style={styleBtn}
                                 active={filter === "Redux"}
                                 onClick={() => setFilter("Redux")}>
                                 Redux
@@ -111,6 +117,7 @@ const PortfolioPage = () => {
                         </li>
                         <li>
                             <a
+                                style={styleBtn}
                                 active={filter === "JavaScript"}
                                 onClick={() => setFilter("JavaScript")}>
                                 JavaScript
@@ -118,6 +125,7 @@ const PortfolioPage = () => {
                         </li>
                         <li>
                             <a
+                                style={styleBtn}
                                 active={filter === "HTML5"}
                                 onClick={() => setFilter("HTML5")}>
                                 HTML5
@@ -125,6 +133,7 @@ const PortfolioPage = () => {
                         </li>
                         <li>
                             <a
+                                style={styleBtn}
                                 active={filter === "CSS"}
                                 onClick={() => setFilter("CSS")}>
                                 CSS
@@ -132,6 +141,7 @@ const PortfolioPage = () => {
                         </li>
                         <li>
                             <a
+                                style={styleBtn}
                                 active={filter === "UI/UX Design"}
                                 onClick={() => setFilter("UI/UX Design")}>
                                 UI/UX Design
@@ -139,6 +149,7 @@ const PortfolioPage = () => {
                         </li>
                         <li>
                             <a
+                                style={styleBtn}
                                 active={filter === "Bootstrap"}
                                 onClick={() => setFilter("Bootstrap")}>
                                 Bootstrap
@@ -146,6 +157,7 @@ const PortfolioPage = () => {
                         </li>
                         <li>
                             <a
+                                style={styleBtn}
                                 active={filter === "C#"}
                                 onClick={() => setFilter("C#")}>
                                 C#

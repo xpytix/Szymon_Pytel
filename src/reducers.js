@@ -3,7 +3,7 @@ import colorsReducer from "./colors/duck/reducers"
 
 
 const rootReducer = combineReducers({
-    colors: colorsReducer,
+    activities: colorsReducer,
 })
 
 export default rootReducer

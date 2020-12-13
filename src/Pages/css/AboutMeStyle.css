@@ -1,0 +1,201 @@
+.container-aboutMe{
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-primary);
+
+}
+.wrapper-aboutMe{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 25px 10px 25px;
+    justify-content: center;
+    align-items: center;
+}
+.quote{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 25px 10px 25px;
+    font-size: 0.9rem
+}
+
+.imageMe{
+    border-radius: 10px;
+    margin: 10px 0 30px 0;
+}
+.textAboutMe{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-family: 'Quicksand', cursive;
+    font-size: 1.2rem;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    animation: borderColorsPulse 15s infinite;
+
+}
+.sliderPage{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 5rem;
+
+}
+.textPage{
+    font-size: 20px;
+    padding: 20px;
+}
+.slideBtn{
+    font-size: 20px;
+
+    background-color: var(--bg-primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.titleAboutME
+{
+    font-weight: lighter;
+    padding: 10px 0 15px 0px;
+    font-size: 42px;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    animation: colorsPulse 15s infinite;
+}
+@media only screen and (max-width: 600px) {
+
+}
+/*large*/
+
+
+@media only screen and (min-width: 835px) {
+    .container-aboutMe{
+        min-height: 100vh;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .titleAboutME{
+        display: none;
+    }
+    .wrapper-aboutMe {
+        margin-top: 100px;
+        width: 70vw;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        animation: borderColorsPulse 15s infinite;
+    }
+
+
+    .textAboutMe{
+        display: flex;
+        width: 35vw;
+        padding: 20px;
+        height: 100%;
+        font-family: 'Quicksand', cursive;
+        font-size: 1.5rem;
+        text-align: start;
+        border: none!important;
+    }
+    .imageMe{
+        display: flex;
+        border-radius: 10px;
+        width: 350px;
+        height: 350px;
+    }
+    .sliderPage{
+        padding-top: 6rem;
+        display: flex;
+    }
+
+}
+@keyframes colorsPulse {
+    0% {
+        color: #ffffff;
+    }
+    10% {
+        color: #FF3380;
+    }
+    20% {
+        color: #CCCC00;
+    }
+    30% {
+        color: #66E64D;
+    }
+    40% {
+        color: #4D80CC;
+    }
+    50% {
+        color: #9900B3;
+    }
+    60% {
+        color: #E64D66;
+    }
+    70% {
+        color: #4DB380;
+    }
+    80% {
+        color: #FF4D4D;
+    }
+    90% {
+        color: #99E6E6;
+    }
+    100%{
+        color: #6666FF;
+    }
+}
+@keyframes borderColorsPulse {
+    0% {
+        border-bottom: 1px solid #ffffff;
+        border-top: 1px solid #ffffff;
+    }
+    10% {
+        border-bottom: 1px solid #FF3380;
+        border-top: 1px solid #FF3380;
+    }
+    20% {
+        border-bottom: 1px solid #CCCC00;
+        border-top: 1px solid #CCCC00;
+    }
+    30% {
+        border-bottom: 1px solid #66E64D;
+        border-top: 1px solid #66E64D;
+    }
+    40% {
+        border-bottom: 1px solid #4D80CC;
+        border-top: 1px solid #4D80CC;
+    }
+    50% {
+        border-bottom: 1px solid #9900B3;
+        border-top: 1px solid #9900B3;
+    }
+    60% {
+        border-bottom: 1px solid #E64D66;
+        border-top: 1px solid #E64D66;
+    }
+    70% {
+        border-bottom: 1px solid #4DB380;
+        border-top: 1px solid #4DB380;
+    }
+    80% {
+        border-bottom: 1px solid #FF4D4D;
+        border-top: 1px solid #FF4D4D;
+    }
+    90% {
+        border-bottom: 1px solid #99E6E6;
+        border-top: 1px solid #99E6E6;
+    }
+    100%{
+        border-bottom: 1px solid #6666FF;
+        border-top: 1px solid #6666FF;
+    }
+}
+

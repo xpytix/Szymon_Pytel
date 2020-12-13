@@ -3,8 +3,10 @@ import { Route, Switch } from 'react-router-dom';
 import {AnimatePresence} from "framer-motion";
 import HomePage from "./HomePage"
 import PortfolioPage from "./PortfolioPage";
-import SkillsPage from "./SkillsPage";
+import Page3AboutME from "./AboutMeComponents/Page3AboutME";
 import ContactPage from "./ContactPage";
+import DesignPage from "./DesignPage";
+import AboutMePage from "./AboutMePage";
 
 
 const Page = () => {
@@ -14,10 +16,11 @@ const Page = () => {
                 <Switch>
                     <Route path="/" exact component={HomePage}/>
                     <Route path="/portfolio" component={PortfolioPage}/>
-                    <Route path="/skills" component={SkillsPage}/>
+                    <Route path="/aboutMe" component={AboutMePage}/>
                     <Route path="/contact" component={ContactPage}/>
+                    <Route path="/design" component={DesignPage}/>
                     <Route  component={ContactPage}/>
-                </Switch>
+                </Switch>s
             </AnimatePresence>
         </>
     );

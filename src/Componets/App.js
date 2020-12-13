@@ -3,7 +3,7 @@ import React from "react";
 import NavBar from "./NavBar";
 import Main from "./Main";
 
-import "./App.css";
+import "./css/App.css";
 
 const App =()=>{
         return (

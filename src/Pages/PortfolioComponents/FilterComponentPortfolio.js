@@ -1,12 +1,16 @@
 import React from 'react';
 
 import "../css/FilterStyle.css"
+import {useSelector} from "react-redux";
 
 
 
 const FilterComponentPortfolio = ({name, description, href, image}) => {
 
-
+    const state = useSelector( (state) => state.activities );
+    let styleBtn ={
+        backgroundColor: state.button,
+    }
     return (
             // <div className="wrapper">
             //     <div className="card">
@@ -23,7 +27,7 @@ const FilterComponentPortfolio = ({name, description, href, image}) => {
                     <div className="flip-card-front">
                         <img src={image} alt={"card-"+ name}/>
                     </div>
-                    <div className="flip-card-back">
+                    <div style={styleBtn} className="flip-card-back">
                         <h1>{name}</h1>
                         <p>
                             {description}

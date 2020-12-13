@@ -1,5 +1,5 @@
 .container{
-    min-height: 90vh;
+    min-height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -26,7 +26,6 @@
     align-items: center;
     padding-top: 15px;
 
-
 }
 .box{
     text-align: center;
@@ -37,6 +36,7 @@
     position: absolute;
 
 }
+
 .b1{
     animation: ani1 15s infinite;
 }
@@ -49,12 +49,14 @@
 .b4{
     animation: ani4 15s infinite;
 }
+
 .socialBtn{
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 100%;
     justify-content: center;
+
 }
 .socialBtn button{
     width: 60px;
@@ -65,15 +67,17 @@
     font-size: 32px;
     color: white;
     cursor: pointer;
+    animation: pulse 1s;
+
 
 }
 .socialBtn button i {
     margin:0 auto;
     border-radius: 10px;
+
 }
 
 #github:hover{
-
     color: #6e5494;
 }
 #facebook:hover{
@@ -87,23 +91,26 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
 }
 .contact{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5%;
 
-}
-.contact a{
+    justify-content: center;
+    text-align: center;
     margin-top: 5%;
 
 }
-.contact-btn{
+.contact a{
+    width: 40vw;
+    height: 5vh;
 
+}
+.contact-btn{
+    animation: pulse 2s;
     width: 60vw;
     height: 5vh;
     border-radius: 20px;
     border: none;
     font-size: 22px;
     align-items: center;
+    margin-bottom: 80px;
 }
 
 img{
@@ -113,6 +120,33 @@ img{
     border-radius: 50%;
 
 }
+
+@media only screen and (max-width: 600px) {
+
+}
+/*large*/
+@media only screen and (min-width: 600px) {
+    .contact{
+        justify-content: center;
+        text-align: center;
+
+    }
+    .contact-btn{
+
+        width: 40vw;
+
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform:translateX(-25%);
+    }
+    100% {
+        transform:translateX(25%);
+    }
+}
+
 @keyframes ani1 {
     0%{
         opacity: 0;
@@ -157,20 +191,5 @@ img{
         opacity: 0;
     }
 }
-
-
-@media only screen and (max-width: 600px) {
-
-}
-/*large*/
-@media only screen and (min-width: 600px) {
-    .contact-btn{
-
-        width: 40vw;
-
-    }
-}
-
-
 
 
