@@ -7,7 +7,7 @@ import {useDispatch, useSelector} from "react-redux";
 
 
 const list =[
-    {name: "Home", path: "/", exact: true, icon: "fas fa-home" },
+    {name: "Home", path: "/Szymon_Pytel", exact: true, icon: "fas fa-home" },
     {name: "Portfolio", path: "/portfolio", icon: "fas fa-address-card"},
     {name: "About Me", path: "/aboutMe", icon: "fas fa-graduation-cap"},
     {name: "Contact", path: "/contact", icon: "far fa-envelope"},

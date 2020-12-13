@@ -14,7 +14,7 @@ const Page = () => {
         <>
             <AnimatePresence>
                 <Switch>
-                    <Route path="/" exact component={HomePage}/>
+                    <Route path="/Szymon_Pytel" exact component={HomePage}/>
                     <Route path="/portfolio" component={PortfolioPage}/>
                     <Route path="/aboutMe" component={AboutMePage}/>
                     <Route path="/contact" component={ContactPage}/>
