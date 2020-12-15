@@ -3,6 +3,7 @@ import "./css/NavBarStyle.css";
 
 import {Link, NavLink} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
+import { motion } from "framer-motion"
 
 
 
@@ -24,29 +25,30 @@ const NavBar = () => {
     const menu = list.map(item => (
         <li className="nav-item" key={item.name}>
             <NavLink className={"test"} activeStyle={{color: "red"}}  key={item.name} to={item.path} exact={item.exact ? item.exact: false} activeClassName="activeRoute" >
-                <a className="nav-link">
+                <motion.a  whileTap={{ scale: 1.1 }} className="nav-link">
                     <i style={styleButton} className={item.icon}/>
                     <span className="link-text">{item.name}</span>
-                </a >
+                </motion.a >
             </NavLink>
         </li>
     ))
 
     return (
-        <nav className="navBar" style={styleNavBar}>
+        <motion.nav initial={{y: -250}} animate={{y: 0}}
+            className="navBar" style={styleNavBar}>
             <ul className="navBar-nav">
                 {menu}
                 <li className="nav-item">
                     <NavLink to={"/design"}  activeClassName="activeRoute" >
-                        <a className="nav-link">
+                        <motion.a  whileTap={{ scale: 1.3 }} className="nav-link">
                             <i className="fas fa-palette"/>
                             <span className="link-text">Design it!</span>
-                        </a>
+                        </motion.a>
                     </NavLink>
 
                 </li>
             </ul>
-        </nav>
+        </motion.nav>
     );
 };
 

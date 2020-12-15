@@ -1,5 +1,6 @@
 .container{
     min-height: 100vh;
+
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -95,10 +96,11 @@
     justify-content: center;
     text-align: center;
     margin-top: 5%;
+    height: 5vh;
 
 }
 .contact a{
-    width: 40vw;
+
     height: 5vh;
 
 }
@@ -110,7 +112,7 @@
     border: none;
     font-size: 22px;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
 }
 
 img{
@@ -129,11 +131,13 @@ img{
     .contact{
         justify-content: center;
         text-align: center;
+        width: 40vw;
+        margin: auto;
 
     }
     .contact-btn{
-
-        width: 40vw;
+        margin-top: 5%;
+        width: 30vw;
 
     }
 }

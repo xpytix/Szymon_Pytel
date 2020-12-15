@@ -4,6 +4,7 @@ import Page1AboutMe from "./AboutMeComponents/Page1AboutME";
 import Page3AboutMe from "./AboutMeComponents/Page3AboutME";
 import {useDispatch, useSelector} from "react-redux";
 import {CHANGE_PAGE_DECREMENT, CHANGE_PAGE_INCREMENT} from "../colors/duck/actions";
+import {motion} from "framer-motion";
 
 const DisplayPage =(props) =>{
 
@@ -39,9 +40,19 @@ const AboutMePage = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+    let pageTransition = {
+        in: {
+            opacity: 1,
+            y: 0
+        },
+        out:{
+            opacity: 0,
+            y: "-100vh"
+        }
+    };
     return (
         <>
-            <div style={styleBtn} className="container-aboutMe">
+            <motion.div style={styleBtn} className="container-aboutMe" initial="out" animate="in" exit ="out"  variants={pageTransition}>
                     <DisplayPage page={state.pageAboutMe}/>
                     <div className="sliderPage">
                         {
@@ -58,7 +69,7 @@ const AboutMePage = () => {
                         }
 
                 </div>
-            </div>
+            </motion.div>
         </>
     );
 };

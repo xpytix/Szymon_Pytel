@@ -1,12 +1,12 @@
 import React from 'react';
 import "./css/MainStyle.css";
 import Page from "../Pages/Page"
-
+import {motion} from "framer-motion";
 import {useSelector} from "react-redux";
 
 
 
-const Main = () => {
+const Main = (router) => {
 
     const state = useSelector( (state) => state.activities );
     let style = {
@@ -15,7 +15,9 @@ const Main = () => {
     return (
 
         <main className="main" style={style}>
+
                 <Page/>
+
         </main>
     );
 };

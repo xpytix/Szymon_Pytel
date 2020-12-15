@@ -8,6 +8,7 @@ import UserGeneratorImage from "./imagesCardFilter/user-generator.png";
 import TimeUpImage from "./imagesCardFilter/timeUp.png";
 import PortfolioImage from "./imagesCardFilter/portfolio.png";
 import {useSelector} from "react-redux";
+import {motion} from "framer-motion";
 
 
 const PortfolioPage = () => {
@@ -69,99 +70,106 @@ const PortfolioPage = () => {
         }));
         setProjects(filtered);
     }, [filter]);
-
-
+    let pageTransition = {
+        in: {
+            opacity: 1,
+            y: 0
+        },
+        out:{
+            opacity: 0,
+            y: "-100vh"
+        }
+    };
     return (
-        <div>
-            <div className="container">
+            <motion.div className="container" initial="out" animate="in" exit ="out"  variants={pageTransition}>
                 <div className="menu">
                     <ul className="ks-cboxtags">
                         <li>
-                            <a style={styleBtn} active={filter === "All"}
+                            <motion.a  whileHover={{ scale: 1.2 }} style={styleBtn} active={filter === "All"}
                                 onClick={() => setFilter("All")}>
                                 All
-                            </a>
+                            </motion.a>
                         </li>
                         <li>
-                            <a
+                            <motion.a  whileHover={{ scale: 1.2 }}
                                 style={styleBtn}
                                 active={filter === "Front-end"}
                                 onClick={() => setFilter("Front-end")}>
                                 Frontend
-                            </a>
+                            </motion.a>
                         </li>
                         <li>
-                            <a
+                            <motion.a  whileHover={{ scale: 1.2 }}
                                 style={styleBtn}
                                 active={filter === "Back-end"}
                                 onClick={() => setFilter("Back-end")}>
                                 Back-end
-                            </a>
+                            </motion.a>
                         </li>
 
                         <li>
-                            <a
+                            <motion.a  whileHover={{ scale: 1.2 }}
                                 style={styleBtn}
                                 active={filter === "ReactJs"}
                                 onClick={() => setFilter("ReactJs")}>
                                 ReactJs
-                            </a>
+                            </motion.a>
                         </li>
                         <li>
-                            <a
+                            <motion.a  whileHover={{ scale: 1.2 }}
                                 style={styleBtn}
                                 active={filter === "Redux"}
                                 onClick={() => setFilter("Redux")}>
                                 Redux
-                            </a>
+                            </motion.a>
                         </li>
                         <li>
-                            <a
+                            <motion.a  whileHover={{ scale: 1.2 }}
                                 style={styleBtn}
                                 active={filter === "JavaScript"}
                                 onClick={() => setFilter("JavaScript")}>
                                 JavaScript
-                            </a>
+                            </motion.a>
                         </li>
                         <li>
-                            <a
+                            <motion.a  whileHover={{ scale: 1.2 }}
                                 style={styleBtn}
                                 active={filter === "HTML5"}
                                 onClick={() => setFilter("HTML5")}>
                                 HTML5
-                            </a>
+                            </motion.a>
                         </li>
                         <li>
-                            <a
+                            <motion.a  whileHover={{ scale: 1.2 }}
                                 style={styleBtn}
                                 active={filter === "CSS"}
                                 onClick={() => setFilter("CSS")}>
                                 CSS
-                            </a>
+                            </motion.a>
                         </li>
                         <li>
-                            <a
+                            <motion.a  whileHover={{ scale: 1.2 }}
                                 style={styleBtn}
                                 active={filter === "UI/UX Design"}
                                 onClick={() => setFilter("UI/UX Design")}>
                                 UI/UX Design
-                            </a>
+                            </motion.a>
                         </li>
                         <li>
-                            <a
+                            <motion.a  whileHover={{ scale: 1.2 }}
                                 style={styleBtn}
                                 active={filter === "Bootstrap"}
                                 onClick={() => setFilter("Bootstrap")}>
                                 Bootstrap
-                            </a>
+                            </motion.a>
                         </li>
                         <li>
-                            <a
+                            <motion.a  whileHover={{ scale: 1.2 }}
                                 style={styleBtn}
                                 active={filter === "C#"}
                                 onClick={() => setFilter("C#")}>
                                 C#
-                            </a>
+                            </motion.a>
                         </li>
                     </ul>
                 </div>
@@ -169,9 +177,8 @@ const PortfolioPage = () => {
                     {projects.map(item =>
                         item.filtered === true ? <FilterComponentPortfolio name={item.name} image={item.image} description={item.description} href={item.href} /> : null )}
                 </div>
-            </div>
+            </motion.div>
 
-        </div>
     );
 };
 

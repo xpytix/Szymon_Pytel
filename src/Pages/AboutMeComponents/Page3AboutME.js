@@ -23,6 +23,7 @@ import {forEach} from "react-bootstrap/ElementChildren";
 import SkillComponent from "./SkillComponent"
 import ToolComponent from "./ToolComponent";
 import {useSelector} from "react-redux";
+import {motion} from "framer-motion";
 
 const Page3AboutME = () => {
     const state = useSelector( (state) => state.activities );
@@ -30,21 +31,21 @@ const Page3AboutME = () => {
         color: state.font,
     }
     const [listSkills, setListSkills]= useState([
-        {id: 1, name: "JavaScript",iconWhite:"", iconBlack: "",  iconFont: "fab fa-js", description:" bla bla blaa?"},
-        {id: 2, name: "ReactJs",iconWhite: "", iconBlack: "",  iconFont: "fab fa-react",description:" bla bla blaa?"},
-        {id: 3, name: "Redux", iconWhite: reduxWhiteIcon , iconBlack: reduxBlackIcon, iconFont: "",description:" bla bla blaa?"},
-        {id: 4, name: "C#", iconWhite: cSharpWhiteIcon, iconBlack: cSharpBlackIcon, iconFont: "", description:" bla bla blaa?"},
-        {id: 5, name: "otherSkill",iconWhite: "", iconBlack: "",  iconFont:"fas fa-question", description:" bla bla blaa?"}])
+        {id: 1, name: "JavaScript",iconWhite:"", iconBlack: "",  iconFont: "fab fa-js", description:"Control Flow,  Asynchronity, DOM manipulation, ES2015"},
+        {id: 2, name: "ReactJs",iconWhite: "", iconBlack: "",  iconFont: "fab fa-react", description:"info"},
+        {id: 3, name: "Redux", iconWhite: reduxWhiteIcon , iconBlack: reduxBlackIcon, iconFont: "", description:"info"},
+        {id: 4, name: "C#", iconWhite: cSharpWhiteIcon, iconBlack: cSharpBlackIcon, iconFont: "", description:"info"},
+        {id: 5, name: "otherSkill",iconWhite: "", iconBlack: "",  iconFont:"fas fa-question",  description:"info"}])
 
     const [listTools, setlistTools]= useState([
 
-        {id: 1, name: "PhotoShop", iconWhite: psWhiteIcon, iconBlack: psBlackIcon, iconFont: "",description:" bla bla blaa?"},
-        {id: 2, name: "WebStorm", iconWhite:  webBlackIcon, iconBlack: webWhiteIcon, iconFont: "", description:" bla bla blaa?"},
-        {id: 3, name: "PremierePro", iconWhite: premiereProWhiteIcon, iconBlack: premiereProBlackIcon, iconFont: "",description:" bla bla blaa?"},
-        {id: 4,  name: "VisualStudio", iconWhite: visualBlackIcon, iconBlack: visualWhiteIcon, iconFont: "", description:" bla bla blaa?"},
-        {id: 5, name: "Figma", iconWhite: figmaWhiteIcon, iconBlack: figmaBlackIcon, iconFont: "", description:" bla bla blaa?"},
-        {id: 6, path: "/git", name: "Git", iconWhite: gitWhiteIcon , iconBlack: gitBlackIcon, iconFont: "", description:" bla bla blaa?"},
-        {id: 7,  path: "/otherTools", name: "other",  iconWhite: "" , iconBlack: "",  iconFont:"fas fa-question", description:" bla bla blaa?"}])
+        {id: 1, name: "PhotoShop", iconWhite: psWhiteIcon, iconBlack: psBlackIcon, iconFont: "", description:"info"},
+        {id: 2, name: "WebStorm", iconWhite:  webBlackIcon, iconBlack: webWhiteIcon, iconFont: "",  description:"info"},
+        {id: 3, name: "PremierePro", iconWhite: premiereProWhiteIcon, iconBlack: premiereProBlackIcon, iconFont: "", description:"info"},
+        {id: 4,  name: "VisualStudio", iconWhite: visualBlackIcon, iconBlack: visualWhiteIcon, iconFont: "", description:"info"},
+        {id: 5, name: "Figma", iconWhite: figmaWhiteIcon, iconBlack: figmaBlackIcon, iconFont: "", description:"info"},
+        {id: 6, path: "/git", name: "Git", iconWhite: gitWhiteIcon , iconBlack: gitBlackIcon, iconFont: "",  description:"info"},
+        {id: 7,  path: "/otherTools", name: "other",  iconWhite: "" , iconBlack: "",  iconFont:"fas fa-question", description:"info"}])
 
     const [activeSkill, setActiveSkill] = useState();
     const [activeTools, setActiveTool] = useState();
@@ -75,9 +76,18 @@ const Page3AboutME = () => {
         window.scrollTo(0, 0)
     }, [])
 
-
+    let pageTransition = {
+        in: {
+            opacity: 1,
+            y: 0
+        },
+        out:{
+            opacity: 0,
+            y: "-100vh"
+        }
+    };
     return (
-        <div className="container-skills-tools">
+        <motion.div initial="out" animate="in" exit ="out"  variants={pageTransition} className="wrapper-aboutMe" className="container-skills-tools">
 
             <div className="main-skills-tools">
 
@@ -96,7 +106,7 @@ const Page3AboutME = () => {
 
             </div>
 
-        </div>
+        </motion.div>
     );
 };
 

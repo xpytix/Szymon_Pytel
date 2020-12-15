@@ -6,6 +6,7 @@ import Slider from '@material-ui/core/Slider';
 import Select from '@material-ui/core/Select';
 import MenuItem from "@material-ui/core/MenuItem";
 import InputLabel from "@material-ui/core/InputLabel";
+import {motion} from "framer-motion";
 
 
 const colorsArray =
@@ -125,8 +126,18 @@ const DesignPage = () => {
     //
     // }
     //
+    let pageTransition = {
+        in: {
+            opacity: 1,
+            y: 0
+        },
+        out:{
+            opacity: 0,
+            y: "-100vh"
+        }
+    };
     return (
-        <div  className="sliderContainer" align="center">
+            <motion.div  initial="out" animate="in" exit ="out"  variants={pageTransition} className="sliderContainer" >
 
             <h1 style={styleBody}>Body</h1>
             <Slider
@@ -169,7 +180,7 @@ const DesignPage = () => {
             />
 
 
-        </div>
+            </motion.div>
     );
 };
 

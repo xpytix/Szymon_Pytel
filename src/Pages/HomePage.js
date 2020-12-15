@@ -1,6 +1,7 @@
 import React from 'react';
 import "./css/HomeStyle.css"
 import imgAvatar from '../images/avatar.jpg';
+
 import {Link, NavLink} from "react-router-dom";
 import {motion} from "framer-motion";
 import {useSelector} from "react-redux";
@@ -20,14 +21,36 @@ const HomePage = () => {
         backgroundColor: state.button,
     }
 
-
+    let pageTransition = {
+        in: {
+            opacity: 1,
+            y: 0
+        },
+        out:{
+            opacity: 0,
+            y: "-100vh"
+        }
+    };
     return (
-     <motion.div initial={{opacity: 0}} animate= {{opacity: 1}} exit = {{opacity: 0}}>
 
-            <div className="container" >
 
+            <motion.div className="container" initial="out" animate="in" exit ="out"  variants={pageTransition}>
                 <div className="main-text">
-                    <img src={imgAvatar} alt=""/>
+                    <motion.img src={imgAvatar} alt=""
+                    initial="hidden" animate="visible" variants={{
+                        hidden:{
+                            scale: .8,
+                            opacity: 0
+                        },
+                        visible:{
+                            scale:1,
+                            opacity:1,
+                            transition:{
+                                delay: .4
+                            }
+                        }
+                    }}
+                    />
                     <h1>Hello.
                         I am Simon
                     </h1>
@@ -40,20 +63,25 @@ const HomePage = () => {
                 </div>
 
                 <div className="socialBtn">
-                    <button  style={styleBody}><i style={styleBtn} id="github" className="fab fa-github"></i></button>
-                    <button  style={styleBody}><i style={styleBtn} id="linkedin" className="fab fa-linkedin"></i></button>
-                    <button  style={styleBody}><i style={styleBtn} id="instagram" className="fab fa-instagram"></i></button>
-                    <button  style={styleBody}><i style={styleBtn} id="facebook" className="fab fa-facebook"></i></button>
+                    <motion.button  whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} style={styleBody}>
+                        <i style={styleBtn} id="github" className="fab fa-github"></i>
+                    </motion.button>
+
+                    <motion.button  whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}  style={styleBody}>
+                        <i style={styleBtn} id="linkedin" className="fab fa-linkedin"></i>
+                    </motion.button>
+                    <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} style={styleBody}>
+                        <i style={styleBtn} id="instagram" className="fab fa-instagram"></i>
+                    </motion.button>
+                    <motion.button  whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} style={styleBody}>
+                        <i style={styleBtn} id="facebook" className="fab fa-facebook"></i>
+                    </motion.button>
                 </div>
-                <div className="contact">
+                <motion.div className="contact"   whileTap={{ scale: 1 }} whileHover={{scale: 1.2 , transition: { duration: .2}}}>
                     <NavLink to={"/contact"}><button style={styleBtnConnect} className="contact-btn">Let's talk</button></NavLink>
-                </div>
+                </motion.div>
 
-
-            </div>
-
-     </motion.div>
-
+            </motion.div>
     )
 }
 
