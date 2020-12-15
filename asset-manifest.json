@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Szymon_Pytel/static/css/main.81a085ad.chunk.css",
-    "main.js": "/Szymon_Pytel/static/js/main.01652a57.chunk.js",
-    "main.js.map": "/Szymon_Pytel/static/js/main.01652a57.chunk.js.map",
+    "main.js": "/Szymon_Pytel/static/js/main.a1804aaa.chunk.js",
+    "main.js.map": "/Szymon_Pytel/static/js/main.a1804aaa.chunk.js.map",
     "runtime-main.js": "/Szymon_Pytel/static/js/runtime-main.4091670f.js",
     "runtime-main.js.map": "/Szymon_Pytel/static/js/runtime-main.4091670f.js.map",
     "static/css/2.83342f34.chunk.css": "/Szymon_Pytel/static/css/2.83342f34.chunk.css",
@@ -29,6 +29,6 @@
     "static/css/2.83342f34.chunk.css",
     "static/js/2.5f8ff186.chunk.js",
     "static/css/main.81a085ad.chunk.css",
-    "static/js/main.01652a57.chunk.js"
+    "static/js/main.a1804aaa.chunk.js"
   ]
 }
