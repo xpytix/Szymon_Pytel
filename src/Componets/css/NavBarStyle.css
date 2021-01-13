@@ -93,11 +93,14 @@ ul.navBar-nav{
         bottom: 0;
         width: 100%;
         height: 5rem!important;
+
+
     }
     .navBar-nav {
         flex-direction: row;
         height: auto;
         width: 100vw;
+
     }
     .nav-link {
         justify-content: center;

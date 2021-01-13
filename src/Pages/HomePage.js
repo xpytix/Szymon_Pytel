@@ -36,7 +36,7 @@ const HomePage = () => {
 
             <motion.div className="container" initial="out" animate="in" exit ="out"  variants={pageTransition}>
                 <div className="main-text">
-                    <motion.img src={imgAvatar} alt=""
+                    <motion.img class="imgAvatar" src={imgAvatar} alt=""
                     initial="hidden" animate="visible" variants={{
                         hidden:{
                             scale: .8,
