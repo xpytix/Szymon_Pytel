@@ -26,12 +26,10 @@ const DesignPage = () => {
     const state = useSelector( (state) => state.activities );
     const dispatch = useDispatch();
 
-    const [sliderNavBarValue, setSliderValue] = useState( "#23232e" );
-    const [sliderBodyValue, setSliderBodyValue] = useState( "#23232e");
-    const [sliderButtonValue, setSliderButtonValue] = useState( "#23232e");
-    const [sliderFontValue, setSliderFontValue] = useState( "#fff");
-
-
+    const [sliderNavBarValue, setSliderValue] = useState();
+    const [sliderBodyValue, setSliderBodyValue] = useState( );
+    const [sliderButtonValue, setSliderButtonValue] = useState();
+    const [sliderFontValue, setSliderFontValue] = useState( );
 
     let styleButton = {
         color: state.button
@@ -103,29 +101,6 @@ const DesignPage = () => {
                 }
         } )
     }
-
-    //
-    // // const [navBarSlider, setNavBarSlider] = useState(navBar);
-    // // const [iconsSlider, setIconsSlider] = useState( icons );
-    // // // const [mainSlider, setMainSlider] = useState( main )
-    // // // const [paragraphSlider, setParagraphSlider] = useState( paragraph )
-    //
-    // const handleChangeNavSlider = (event, newValue) => {
-    //
-    //     // const color = colorsArray[newValue];
-    //     // setNavBarSlider(color);
-    //
-    // }
-    // const handleChangeIconSlider =(event, newValue)=> {
-    //     const color = colorsArray[newValue];
-    //     console.log(color)
-    //     this.setState({
-    //         navBar: color
-    //     })
-    //
-    //
-    // }
-    //
     let pageTransition = {
         in: {
             opacity: 1,
