@@ -12,15 +12,6 @@ const FilterComponentPortfolio = ({name, description, href, image}) => {
         backgroundColor: state.button,
     }
     return (
-            // <div className="wrapper">
-            //     <div className="card">
-            //         <img className="card-img" src={img} alt=""/>
-            //         <div className="card-text">
-            //             <h2>{props.name}</h2>
-            //             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores exercitationem facere in incidunt maxime, minus necessitatibus, nemo nostrum, pariatur rerum sapiente suscipit! Consectetur dicta distinctio ipsam obcaecati sit ullam vero.</p>
-            //         </div>
-            //         </div>
-            // </div>
         <div className="card" key={name}>
             <div className="flip-card-container">
                 <div className="flip-card">

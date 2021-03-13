@@ -157,6 +157,22 @@ const PortfolioPage = () => {
                         </li>
                         <li>
                             <motion.a  whileHover={{ scale: 1.2 }}
+                                       style={styleBtn}
+                                       active={filter === "Photoshop"}
+                                       onClick={() => setFilter("Photoshop")}>
+                                Photoshop
+                            </motion.a>
+                        </li>
+                        <li>
+                            <motion.a  whileHover={{ scale: 1.2 }}
+                                       style={styleBtn}
+                                       active={filter === "WordPress"}
+                                       onClick={() => setFilter("WordPress")}>
+                                WordPress
+                            </motion.a>
+                        </li>
+                        <li>
+                            <motion.a  whileHover={{ scale: 1.2 }}
                                 style={styleBtn}
                                 active={filter === "Bootstrap"}
                                 onClick={() => setFilter("Bootstrap")}>
