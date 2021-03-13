@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Szymon_Pytel/static/css/main.f27f89da.chunk.css",
-    "main.js": "/Szymon_Pytel/static/js/main.431be0e2.chunk.js",
-    "main.js.map": "/Szymon_Pytel/static/js/main.431be0e2.chunk.js.map",
+    "main.js": "/Szymon_Pytel/static/js/main.b4989a1a.chunk.js",
+    "main.js.map": "/Szymon_Pytel/static/js/main.b4989a1a.chunk.js.map",
     "runtime-main.js": "/Szymon_Pytel/static/js/runtime-main.4091670f.js",
     "runtime-main.js.map": "/Szymon_Pytel/static/js/runtime-main.4091670f.js.map",
     "static/css/2.83342f34.chunk.css": "/Szymon_Pytel/static/css/2.83342f34.chunk.css",
@@ -15,8 +15,10 @@
     "static/css/main.f27f89da.chunk.css.map": "/Szymon_Pytel/static/css/main.f27f89da.chunk.css.map",
     "static/js/2.5f8ff186.chunk.js.LICENSE.txt": "/Szymon_Pytel/static/js/2.5f8ff186.chunk.js.LICENSE.txt",
     "static/media/AboutMe.8ce0af4a.jpg": "/Szymon_Pytel/static/media/AboutMe.8ce0af4a.jpg",
+    "static/media/HighSchool_wordpress.e9a2f364.png": "/Szymon_Pytel/static/media/HighSchool_wordpress.e9a2f364.png",
     "static/media/audiofile.305ea254.png": "/Szymon_Pytel/static/media/audiofile.305ea254.png",
     "static/media/avatar.ad79dcb7.jpg": "/Szymon_Pytel/static/media/avatar.ad79dcb7.jpg",
+    "static/media/frozen-gotowe-min.79be61c8.jpg": "/Szymon_Pytel/static/media/frozen-gotowe-min.79be61c8.jpg",
     "static/media/kick-it.baa193de.png": "/Szymon_Pytel/static/media/kick-it.baa193de.png",
     "static/media/portfolio.b27d20b2.png": "/Szymon_Pytel/static/media/portfolio.b27d20b2.png",
     "static/media/timeUp.0d5a46e6.png": "/Szymon_Pytel/static/media/timeUp.0d5a46e6.png",
@@ -29,6 +31,6 @@
     "static/css/2.83342f34.chunk.css",
     "static/js/2.5f8ff186.chunk.js",
     "static/css/main.f27f89da.chunk.css",
-    "static/js/main.431be0e2.chunk.js"
+    "static/js/main.b4989a1a.chunk.js"
   ]
 }
