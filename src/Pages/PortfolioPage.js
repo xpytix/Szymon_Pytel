@@ -7,6 +7,8 @@ import KickItImage from "./imagesCardFilter/kick-it.png";
 import UserGeneratorImage from "./imagesCardFilter/user-generator.png";
 import TimeUpImage from "./imagesCardFilter/timeUp.png";
 import PortfolioImage from "./imagesCardFilter/portfolio.png";
+import HigSchool_WP from "./imagesCardFilter/HighSchool_wordpress.png";
+import FrozenArm from "./imagesCardFilter/frozen-gotowe-min.jpg";
 import {useSelector} from "react-redux";
 import {motion} from "framer-motion";
 
@@ -53,6 +55,21 @@ const PortfolioPage = () => {
             image: AudiofileImage
 
         },
+        {
+            name: "High school - WordPress",
+            category: ["All", "WordPress", "PhotoShop", "UI/UX Design"],
+            description: "Me and my friend worked on this commercial project. The project was created for the high school in Pińczów,  is based on wordpress.",
+            href: "http://lopinczow.pl/",
+            image: HigSchool_WP
+        },
+        {
+            name: "Frozen Arm",
+            category: ["All", "PhotoShop",],
+            description: "Just be chilling and drinking lemon, my work in photoshop",
+            href: "https://www.instagram.com/p/CBifEW_lnqV/",
+            image: FrozenArm
+        },
+
     ];
     const [filter, setFilter] = useState("All");
     const [projects, setProjects] = useState([]);
@@ -158,9 +175,9 @@ const PortfolioPage = () => {
                         <li>
                             <motion.a  whileHover={{ scale: 1.2 }}
                                        style={styleBtn}
-                                       active={filter === "Photoshop"}
-                                       onClick={() => setFilter("Photoshop")}>
-                                Photoshop
+                                       active={filter === "PhotoShop"}
+                                       onClick={() => setFilter("PhotoShop")}>
+                                PhotoShop
                             </motion.a>
                         </li>
                         <li>
